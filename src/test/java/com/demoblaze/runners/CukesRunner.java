@@ -8,14 +8,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 //"pretty",
+                "json:target/cucumber.json",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features/test.feature",
         glue =  "com/demoblaze/step_definitions",
-        dryRun = false,
-        tags = "@wip",
+        dryRun = true,
         publish = false
 )
 

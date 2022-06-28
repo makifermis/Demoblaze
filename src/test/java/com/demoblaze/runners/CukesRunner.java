@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features/test.feature",
         glue =  "com/demoblaze/step_definitions",
-        dryRun = true,
+        dryRun = false,
         publish = false
 )
 

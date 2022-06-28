@@ -5,7 +5,9 @@ import com.demoblaze.utilities.BrowserUtils;
 import com.demoblaze.utilities.ConfigurationReader;
 import com.demoblaze.utilities.Driver;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,4 +36,8 @@ public class Test_StepDefinitions {
         productPage.getLink(link);
     }
 
+    @Then("buyer should see {string} is added to cart")
+    public void buyerShouldSeeIsAddedToCart(String product) {
+        Assert.assertTrue(productPage.getProductElement(product).isDisplayed());
+    }
 }
